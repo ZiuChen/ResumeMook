@@ -1,5 +1,4 @@
 import React from 'react'
-import { useEffect } from 'react'
 import './index.less'
 import Logo from '@assets/logo.png'
 import { useHistory } from 'react-router'
@@ -8,13 +7,8 @@ import { shell } from 'electron'
 import { ROUTER_ENTRY } from '@common/constants/router'
 import { isHttpOrHttpsUrl } from '@common/utils/router'
 
-import { useSelector, useDispatch } from 'react-redux'
-
 function Root() {
   const history = useHistory()
-
-  const dispatch = useDispatch()
-  const appName = useSelector((state: any) => state.globalModel.appName)
 
   const onRouterToLink = (router: TSRouter.Item) => {
     if (isHttpOrHttpsUrl(router.url)) {
@@ -23,23 +17,6 @@ function Root() {
       history.push(router.url)
     }
   }
-
-  useEffect(() => {
-    setTimeout(() => {
-      console.log('3s 后修改...')
-      dispatch({
-        type: 'globalModel/setStore',
-        payload: {
-          key: 'appName',
-          values: 'ResumeMook'
-        }
-      })
-    }, 3000)
-  }, [dispatch])
-
-  useEffect(() => {
-    console.log('appName = ', appName)
-  }, [appName])
 
   return (
     <div styleName="root">
