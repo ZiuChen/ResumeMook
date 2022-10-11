@@ -9,8 +9,9 @@ function App() {
     <Router>
       <Switch>
         <Route path="/">
-          <Title text="可视化简历平台" styles={{ color: 'blue' }}></Title>
+          <Title text="可视化简历平台" styles={{ color: 'blue' }} />
           <div> Electron + React !</div>
+          <Title text="self Title Component" />
         </Route>
       </Switch>
     </Router>
