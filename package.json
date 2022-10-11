@@ -1,8 +1,8 @@
 {
   "main": "./app/main/electron.js",
   "scripts": {
-    "start:main": "webpack --config ./webpack/webpack.main.dev.js && electron ./dist/electron.js",
-    "start:render": "webpack-dev-server --config ./webpack/webpack.render.dev.js"
+    "start:main": "webpack --config ./webpack/webpack.main.dev.ts && electron ./dist/electron.js",
+    "start:render": "webpack-dev-server --config ./webpack/webpack.render.dev.ts"
   },
   "dependencies": {
     "@babel/polyfill": "^7.12.1",
