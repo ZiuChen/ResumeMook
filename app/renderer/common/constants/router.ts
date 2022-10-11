@@ -12,7 +12,7 @@ export const ROUTER_KEY = {
 
 export const ROUTER_ENTRY: TSRouter.Item[] = [
   {
-    url: 'https://github.com/PDKSophia/visResumeMook',
+    url: 'https://github.com/ZiuChen/ResumeMook',
     key: 'intro',
     text: '介绍'
   },
@@ -22,7 +22,7 @@ export const ROUTER_ENTRY: TSRouter.Item[] = [
     text: '简历'
   },
   {
-    url: 'https://github.com/PDKSophia/visResumeMook',
+    url: 'https://github.com/ZiuChen/ResumeMook',
     key: 'code',
     text: '源码'
   }
