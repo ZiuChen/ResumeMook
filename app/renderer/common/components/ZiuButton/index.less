@@ -1,0 +1,51 @@
+@bg-color: #ffffff;
+@bg-hover-color: #f0f5ff;
+@border-color: #f0f0f0;
+@border-hover-color: #2f54eb;
+@text-color: #000000;
+@text-hover-color: @border-hover-color;
+@text-disabled-color: #a8abb2;
+
+.ziu-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: @bg-color;
+  border: 1px solid @border-color;
+  color: @text-color;
+  padding: 5px;
+  margin: 5px;
+  border-radius: 5px;
+  user-select: none;
+  cursor: pointer;
+  &:hover {
+    color: @text-hover-color;
+    background-color: @bg-hover-color;
+    border: 1px solid @border-hover-color;
+    transition: all 0.15s;
+  }
+}
+.ziu-button-large {
+  font-size: 14px;
+  width: 95px;
+  height: 30px;
+}
+.ziu-button-medium {
+  font-size: 14px;
+  width: 75px;
+  height: 25px;
+}
+.ziu-button-small {
+  font-size: 13px;
+  width: 55px;
+  height: 20px;
+}
+.ziu-button-disabled {
+  cursor: not-allowed;
+  color: @text-disabled-color;
+  &:hover {
+    color: @text-disabled-color;
+    background-color: @bg-color;
+    border: 1px solid @border-color;
+  }
+}
